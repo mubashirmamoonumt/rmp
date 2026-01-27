@@ -1,0 +1,77 @@
+ROS2 WORKSPACE FLOW (har lab ka base)
+
+• mkdir -p ~/ros2_ws/src
+• cd ~/ros2_ws
+• colcon build
+• source install/setup.bash
+
+PACKAGE CREATE
+
+• cd ~/ros2_ws/src
+• ros2 pkg create --build-type ament_python package_name
+
+PYTHON NODE SETUP
+
+• cd package_name/package_name
+• touch node.py
+• chmod +x node.py
+
+SETUP.PY ENTRY POINT (bohat important)
+
+entry_points={
+'console_scripts': [
+'node_name = package_name.node:main',
+],
+}
+
+Build ke baad hamesha:
+
+• cd ~/ros2_ws
+• colcon build
+• source install/setup.bash
+
+NODE RUN
+
+• ros2 run package_name node_name
+
+TURTLEBOT ENV SET
+
+• export TURTLEBOT3_MODEL=burger
+
+GAZEBO LAUNCH
+
+• ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+
+TOPICS CHECK
+
+• ros2 topic list
+• ros2 topic echo /odom
+
+COMMON ROS COMMANDS
+
+• ros2 run rviz2 rviz2
+• ros2 pkg list
+
+INSTALL STUFF
+
+• sudo apt update
+• sudo apt install ros-humble-turtlebot3*
+• sudo apt install python3-colcon-common-extensions
+
+BUG, APF, PID, PRM sab ka same pattern
+
+package create
+
+node file
+
+setup.py entry point
+
+colcon build
+
+source
+
+ros2 run
+
+ONE LINE MEMORY FORMULA
+
+Create → Entry point → Build → Source → Run
