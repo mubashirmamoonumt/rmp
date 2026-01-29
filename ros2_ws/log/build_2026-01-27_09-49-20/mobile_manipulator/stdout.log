@@ -1,0 +1,45 @@
+running egg_info
+creating ../../build/mobile_manipulator/mobile_manipulator.egg-info
+writing ../../build/mobile_manipulator/mobile_manipulator.egg-info/PKG-INFO
+writing dependency_links to ../../build/mobile_manipulator/mobile_manipulator.egg-info/dependency_links.txt
+writing entry points to ../../build/mobile_manipulator/mobile_manipulator.egg-info/entry_points.txt
+writing requirements to ../../build/mobile_manipulator/mobile_manipulator.egg-info/requires.txt
+writing top-level names to ../../build/mobile_manipulator/mobile_manipulator.egg-info/top_level.txt
+writing manifest file '../../build/mobile_manipulator/mobile_manipulator.egg-info/SOURCES.txt'
+reading manifest file '../../build/mobile_manipulator/mobile_manipulator.egg-info/SOURCES.txt'
+writing manifest file '../../build/mobile_manipulator/mobile_manipulator.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator
+copying mobile_manipulator/__init__.py -> /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator
+copying mobile_manipulator/wasd_teleop.py -> /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator
+copying mobile_manipulator/move_arm.py -> /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator
+running install
+running install_lib
+creating /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator
+copying /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator/__init__.py -> /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator
+copying /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator/wasd_teleop.py -> /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator
+copying /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator/move_arm.py -> /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator
+byte-compiling /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator/wasd_teleop.py to wasd_teleop.cpython-310.pyc
+byte-compiling /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator/move_arm.py to move_arm.cpython-310.pyc
+running install_data
+creating /home/user/ros2_ws/install/mobile_manipulator/share/ament_index/resource_index/packages
+copying resource/mobile_manipulator -> /home/user/ros2_ws/install/mobile_manipulator/share/ament_index/resource_index/packages
+copying package.xml -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator
+creating /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/launch
+copying launch/sim_nav.launch.py -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/launch
+copying launch/sim.launch.py -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/launch
+creating /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/urdf
+copying urdf/robot.urdf -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/urdf
+creating /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/worlds
+copying worlds/mobile_world.world -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/worlds
+creating /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/maps
+copying maps/map.pgm -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/maps
+copying maps/map.yaml -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/maps
+running install_egg_info
+Copying ../../build/mobile_manipulator/mobile_manipulator.egg-info to /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator-0.0.0-py3.10.egg-info
+running install_scripts
+Installing move_arm script to /home/user/ros2_ws/install/mobile_manipulator/lib/mobile_manipulator
+Installing wasd_teleop script to /home/user/ros2_ws/install/mobile_manipulator/lib/mobile_manipulator
+writing list of installed files to '/home/user/ros2_ws/build/mobile_manipulator/install.log'

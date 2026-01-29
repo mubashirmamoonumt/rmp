@@ -1,0 +1,49 @@
+[1.000s] Invoking command in '/home/user/ros2_ws/src/mobile_manipulator': PYTHONPATH=/home/user/ros2_ws/build/mobile_manipulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mobile_manipulator build --build-base /home/user/ros2_ws/build/mobile_manipulator/build install --record /home/user/ros2_ws/build/mobile_manipulator/install.log --single-version-externally-managed install_data
+[1.251s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.251s]   warnings.warn(msg)
+[1.433s] running egg_info
+[1.461s] creating ../../build/mobile_manipulator/mobile_manipulator.egg-info
+[1.461s] writing ../../build/mobile_manipulator/mobile_manipulator.egg-info/PKG-INFO
+[1.462s] writing dependency_links to ../../build/mobile_manipulator/mobile_manipulator.egg-info/dependency_links.txt
+[1.462s] writing entry points to ../../build/mobile_manipulator/mobile_manipulator.egg-info/entry_points.txt
+[1.463s] writing requirements to ../../build/mobile_manipulator/mobile_manipulator.egg-info/requires.txt
+[1.463s] writing top-level names to ../../build/mobile_manipulator/mobile_manipulator.egg-info/top_level.txt
+[1.463s] writing manifest file '../../build/mobile_manipulator/mobile_manipulator.egg-info/SOURCES.txt'
+[1.529s] reading manifest file '../../build/mobile_manipulator/mobile_manipulator.egg-info/SOURCES.txt'
+[1.529s] writing manifest file '../../build/mobile_manipulator/mobile_manipulator.egg-info/SOURCES.txt'
+[1.529s] running build
+[1.529s] running build_py
+[1.529s] creating /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator
+[1.529s] copying mobile_manipulator/__init__.py -> /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator
+[1.530s] copying mobile_manipulator/wasd_teleop.py -> /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator
+[1.530s] copying mobile_manipulator/move_arm.py -> /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator
+[1.530s] running install
+[1.539s] running install_lib
+[1.570s] creating /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator
+[1.571s] copying /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator/__init__.py -> /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator
+[1.571s] copying /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator/wasd_teleop.py -> /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator
+[1.571s] copying /home/user/ros2_ws/build/mobile_manipulator/build/lib/mobile_manipulator/move_arm.py -> /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator
+[1.572s] byte-compiling /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator/__init__.py to __init__.cpython-310.pyc
+[1.572s] byte-compiling /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator/wasd_teleop.py to wasd_teleop.cpython-310.pyc
+[1.573s] byte-compiling /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator/move_arm.py to move_arm.cpython-310.pyc
+[1.574s] running install_data
+[1.574s] creating /home/user/ros2_ws/install/mobile_manipulator/share/ament_index/resource_index/packages
+[1.574s] copying resource/mobile_manipulator -> /home/user/ros2_ws/install/mobile_manipulator/share/ament_index/resource_index/packages
+[1.575s] copying package.xml -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator
+[1.575s] creating /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/launch
+[1.575s] copying launch/sim_nav.launch.py -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/launch
+[1.576s] copying launch/sim.launch.py -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/launch
+[1.576s] creating /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/urdf
+[1.576s] copying urdf/robot.urdf -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/urdf
+[1.577s] creating /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/worlds
+[1.577s] copying worlds/mobile_world.world -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/worlds
+[1.577s] creating /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/maps
+[1.578s] copying maps/map.pgm -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/maps
+[1.578s] copying maps/map.yaml -> /home/user/ros2_ws/install/mobile_manipulator/share/mobile_manipulator/maps
+[1.578s] running install_egg_info
+[1.611s] Copying ../../build/mobile_manipulator/mobile_manipulator.egg-info to /home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages/mobile_manipulator-0.0.0-py3.10.egg-info
+[1.611s] running install_scripts
+[1.668s] Installing move_arm script to /home/user/ros2_ws/install/mobile_manipulator/lib/mobile_manipulator
+[1.668s] Installing wasd_teleop script to /home/user/ros2_ws/install/mobile_manipulator/lib/mobile_manipulator
+[1.669s] writing list of installed files to '/home/user/ros2_ws/build/mobile_manipulator/install.log'
+[1.705s] Invoked command in '/home/user/ros2_ws/src/mobile_manipulator' returned '0': PYTHONPATH=/home/user/ros2_ws/build/mobile_manipulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/user/ros2_ws/install/mobile_manipulator/lib/python3.10/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mobile_manipulator build --build-base /home/user/ros2_ws/build/mobile_manipulator/build install --record /home/user/ros2_ws/build/mobile_manipulator/install.log --single-version-externally-managed install_data
