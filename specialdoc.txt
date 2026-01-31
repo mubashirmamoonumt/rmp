@@ -1,0 +1,25 @@
+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
+
+import os
+from groq import Groq
+
+client = Groq(api_key=os.environ["GROQ_API_KEY"])
+
+while True:
+    question = input("\nAsk ROS2 AI (q to quit): ")
+
+    if question.lower() == "q":
+        break
+
+    completion = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[{"role": "user", "content": question}],
+        temperature=0.7,
+        max_completion_tokens=1024,
+        stream=True
+    )
+
+    for chunk in completion:
+        print(chunk.choices[0].delta.content or "", end="")
+
+    print("\n")
