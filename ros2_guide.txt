@@ -1,0 +1,60 @@
+Basic Guide to Working with ROS 2 Humble
+
+1 Introduction Robot Operating System 2 (ROS 2) Humble is a long-term
+support (LTS) distribution widely used for robotics research and
+development. This document provides basic commands to create, build, and
+run ROS 2 packages and use Gazebo simulation.
+
+2 Sourcing ROS 2 Humble source /opt/ros/humble/setup.bash ros2 –version
+
+3 Creating a Workspace mkdir -p ~/ros2_ws/src cd ~/ros2_ws
+
+4 Creating a Package
+
+Python: cd ~/ros2_ws/src ros2 pkg create my_pkg –build-type ament_python
+–dependencies rclpy std_msgs
+
+C++: cd ~/ros2_ws/src ros2 pkg create my_pkg –build-type ament_cmake
+–dependencies rclcpp std_msgs
+
+5 Installing Dependencies cd ~/ros2_ws rosdep install –from-paths src
+–ignore-src -r -y
+
+6 Building Packages colcon build colcon build –packages-select my_pkg
+
+7 Source Workspace source install/setup.bash
+
+8 Running Nodes ros2 run my_pkg node_name ros2 run my_pkg
+executable_name
+
+9 Launch Files ros2 launch my_pkg launch_file.launch.py
+
+10 Topics ros2 topic list ros2 topic echo /cmd_vel ros2 topic info /scan
+
+Manual: ros2 topic pub /cmd_vel geometry_msgs/msg/Twist “{linear: {x:
+0.3}, angular: {z: 0.5}}”
+
+11 Nodes & Interfaces ros2 node list ros2 node info /node_name ros2
+interface list ros2 interface show geometry_msgs/msg/Twist
+
+12 Parameters ros2 param list ros2 param get /node_name param_name ros2
+param set /node_name param_name value
+
+13 Services ros2 service list ros2 service call /service_name
+service_type “{data: true}”
+
+14 Gazebo sudo apt install ros-humble-gazebo-ros-pkgs ros2 launch
+gazebo_ros gazebo.launch.py
+
+Spawn: ros2 run gazebo_ros spawn_entity.py -entity my_robot -file
+model.sdf -x 0 -y 0 -z 0.2
+
+15 RViz rviz2
+
+16 Teleop ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+17 Debug rm -rf build install log colcon build source install/setup.bash
+
+18 Structure ros2_ws/ src/ my_pkg/ build/ install/ log/
+
+19 End Essential ROS 2 Humble workflow.
