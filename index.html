@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M3 Toolskit | 100% Free Bulk Video Muter</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="module" src="/_assets/index.d42b95e0.js"></script>
+<link rel="stylesheet" href="/_assets/style.a1e5acc1.css">
+</head>
+
+<body>
+  <!-- Ambient Background -->
+  <div class="ambient-bg">
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+  </div>
+
+  <div id="app" class="app-container">
+    <header class="cinematic-header">
+      <div class="header-content">
+        <h1>M3 Toolskit</h1>
+        <p class="brand-tagline">100% Free Bulk Video Mute Tool</p>
+        <div id="stageProgressBar" class="stage-progress-bar">
+          <div class="stage active" data-stage="upload">1. Upload</div>
+          <div class="stage" data-stage="review">2. Review</div>
+          <div class="stage" data-stage="process">3. Process</div>
+          <div class="stage" data-stage="done">4. Done</div>
+        </div>
+      </div>
+      <div class="worker-status">
+        <span class="status-indicator"></span>
+        <span id="workerLoad">Worker Load: 0/3</span>
+      </div>
+    </header>
+
+    <main class="cinematic-main">
+      <!-- Stage 1: Upload -->
+      <section id="uploadStage" class="stage-section active">
+        <div id="dropzone" class="dropzone cinematic-dropzone">
+          <div class="dropzone-content">
+            <svg class="dropzone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <h2>Drop Cinema Files</h2>
+            <p>MP4, AVI, MOV, MKV up to 100MB per file</p>
+            <p class="subtitle" style="margin-top: 1rem;">Click or drag & drop to upload (Max 50 videos per batch)</p>
+            <button class="btn btn-primary" style="margin-top: 1.5rem;">Select Videos</button>
+            <input type="file" id="fileInput" multiple accept="video/*" class="hidden" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Stage 2 & 3: Staging & Processing Dashboard -->
+      <section id="dashboardStage" class="stage-section hidden">
+        <div class="dashboard-header">
+          <div class="batch-headline">
+            <h2 id="batchCountText">Media Staging Area</h2>
+            <p id="batchSubtext" class="subtitle">Review your clips before processing</p>
+          </div>
+          <div class="batch-actions">
+            <button id="startBatchBtn" class="btn btn-primary btn-glow">Launch Processing</button>
+            <button id="pauseBatchBtn" class="btn btn-secondary hidden">Pause</button>
+            <button id="stopBatchBtn" class="btn btn-danger hidden">Abort Batch</button>
+            <button id="newBatchBtn" class="btn btn-secondary">Clear All</button>
+          </div>
+        </div>
+
+        <div id="videoGrid" class="media-grid">
+          <!-- Media Tiles injected here -->
+        </div>
+      </section>
+    </main>
+
+    <footer id="batchFooter" class="cinematic-footer hidden">
+      <div class="footer-glass">
+        <div class="progress-info">
+          <span id="totalProgressText">Overall Progress: 0%</span>
+          <div class="main-progress-container">
+            <div id="totalProgressBar" class="main-progress-bar"></div>
+          </div>
+        </div>
+        <button id="downloadZipBtn" class="btn btn-primary btn-glow hidden">Download Cinema ZIP</button>
+      </div>
+    </footer>
+
+    <!-- Support Sidebar -->
+    <div class="support-sidebar">
+      <button id="coffeeBtn" class="support-icon btn-glow" title="Join on Patreon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+          <line x1="6" y1="1" x2="6" y2="4"></line>
+          <line x1="10" y1="1" x2="10" y2="4"></line>
+          <line x1="14" y1="1" x2="14" y2="4"></line>
+        </svg>
+      </button>
+      <button id="channelBtn" class="support-icon btn-glow" title="WhatsApp Channel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3.5l-1 4.3" />
+        </svg>
+      </button>
+      <button id="supportBtn" class="support-icon btn-glow" title="WhatsApp Support">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Modals -->
+    <div id="bankModal" class="modal hidden">
+      <div class="modal-content-glass">
+        <div class="modal-header">
+          <h2>Support M3 Toolskit</h2>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="support-options">
+          <p class="subtitle" style="margin-bottom: 2rem; text-align: center;">Choose a way to support our free tools
+          </p>
+          <a href="https://www.patreon.com/15262100/join" target="_blank" class="btn btn-primary btn-glow patreon-btn"
+            style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path
+                d="M22.957 7.21c-.004-3.078-2.484-5.515-5.51-5.515-3.044 0-5.524 2.483-5.524 5.515 0 3.043 2.48 5.524 5.524 5.524 3.026 0 5.506-2.437 5.51-5.524zm-14.738-5.51h-2.95v20.522h2.95V1.7z" />
+            </svg>
+            Join on Patreon
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="channelModal" class="modal hidden">
+      <div class="modal-content-glass">
+        <div class="modal-header">
+          <h2>Join Our Channel</h2>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="support-options">
+          <p class="subtitle" style="margin-bottom: 2rem; text-align: center;">Get latest updates on WhatsApp</p>
+          <a href="https://whatsapp.com/channel/0029Vb6AgzC9xVJfQbVQMw17" target="_blank"
+            class="btn btn-primary btn-glow"
+            style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+            Join WhatsApp Channel
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="supportModal" class="modal hidden">
+      <div class="modal-content-glass">
+        <div class="modal-header">
+          <h2>Direct Support</h2>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="support-options">
+          <p class="subtitle" style="margin-bottom: 2rem; text-align: center;">Contact us directly for support</p>
+          <a href="https://wa.me/923154228873" target="_blank" class="btn btn-primary btn-glow"
+            style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+            Message on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ecosystem-footer">
+      <p>Explore more tools: <a href="https://m3toolskit.shop" target="_blank">m3toolskit.shop</a></p>
+    </div>
+
+  </div>
+
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
